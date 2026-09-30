@@ -1,5 +1,6 @@
 package com.example.a24012021073_mad_practical_6
 
+import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.animation.Animation
@@ -25,7 +26,7 @@ class SplashActivity : AppCompatActivity() , Animation.AnimationListener {
             insets
         }
         imglogo = findViewById(R.id.imglogo)
-        imglogo.setBackgroundColor(R.drawable.uvpce_animation_list)
+        imglogo.setBackgroundResource(R.drawable.uvpce_animation_list)
 
         guniframeanimation = imglogo.background as AnimationDrawable
 
@@ -52,6 +53,9 @@ class SplashActivity : AppCompatActivity() , Animation.AnimationListener {
     }
 
     override fun onAnimationEnd(animation: Animation?) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
 
     }
 
